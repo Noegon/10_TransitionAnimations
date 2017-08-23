@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First Navigable-->
+        <scene sceneID="DW2-py-Lc7">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="YaW-rO-PRL" customClass="NGNModalFirstViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oQe-vQ-TvX"/>
+                        <viewControllerLayoutGuide type="bottom" id="xno-Fb-oRP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LWh-1q-nFW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountain_wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="Tf6-28-5Dq">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8E-O0-wWr">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="np9-nx-9MW"/>
+                                </constraints>
+                                <state key="normal" title="Push to second controller"/>
+                                <connections>
+                                    <segue destination="1Ff-2V-gZw" kind="show" id="Bz6-HP-Vtb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.4366127642" green="0.59543187539999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Tf6-28-5Dq" firstAttribute="top" secondItem="oQe-vQ-TvX" secondAttribute="bottom" id="3TL-7T-i63"/>
+                            <constraint firstItem="J8E-O0-wWr" firstAttribute="leading" secondItem="LWh-1q-nFW" secondAttribute="leading" id="4sl-PR-IRM"/>
+                            <constraint firstAttribute="trailing" secondItem="Tf6-28-5Dq" secondAttribute="trailing" id="7Oc-Cr-geK"/>
+                            <constraint firstItem="xno-Fb-oRP" firstAttribute="top" secondItem="J8E-O0-wWr" secondAttribute="bottom" id="BRa-Vo-v6x"/>
+                            <constraint firstItem="xno-Fb-oRP" firstAttribute="top" secondItem="Tf6-28-5Dq" secondAttribute="bottom" id="Vdi-fC-Xrs"/>
+                            <constraint firstAttribute="trailing" secondItem="J8E-O0-wWr" secondAttribute="trailing" id="W4I-29-UyE"/>
+                            <constraint firstItem="Tf6-28-5Dq" firstAttribute="leading" secondItem="LWh-1q-nFW" secondAttribute="leading" id="vhi-8o-JQZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="First Navigable" id="4xZ-my-2Xb">
+                        <barButtonItem key="backBarButtonItem" title=" " id="LAa-bd-dr5"/>
+                        <barButtonItem key="leftBarButtonItem" image="icon_menu" id="iW9-ZO-YJy">
+                            <connections>
+                                <segue destination="LsA-U4-xRr" kind="unwind" unwindAction="unwindToMenuViewController:" id="v6x-b7-9z1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cUn-Ac-oQs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="LsA-U4-xRr" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2476" y="152"/>
+        </scene>
+        <!--Second Navigable-->
+        <scene sceneID="tBr-Xa-oFL">
+            <objects>
+                <viewController id="1Ff-2V-gZw" customClass="NGNModalSecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bNn-KW-yJ4"/>
+                        <viewControllerLayoutGuide type="bottom" id="ieo-n5-nMf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O1f-Nc-Qdz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mars_wallpapers" translatesAutoresizingMaskIntoConstraints="NO" id="z26-ln-Vh7">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="z26-ln-Vh7" firstAttribute="leading" secondItem="O1f-Nc-Qdz" secondAttribute="leading" id="090-oo-GA2"/>
+                            <constraint firstAttribute="trailing" secondItem="z26-ln-Vh7" secondAttribute="trailing" id="13K-qh-0xg"/>
+                            <constraint firstItem="z26-ln-Vh7" firstAttribute="top" secondItem="bNn-KW-yJ4" secondAttribute="bottom" id="iRI-UK-ZMl"/>
+                            <constraint firstItem="ieo-n5-nMf" firstAttribute="top" secondItem="z26-ln-Vh7" secondAttribute="bottom" id="qrZ-A6-xRL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Second Navigable" id="Hl8-vz-KoN">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Zfq-Rt-xrV"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v2C-EE-ODL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3295" y="152"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eVe-Gu-66n">
+            <objects>
+                <navigationController storyboardIdentifier="navigableNavigator" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jUE-S9-PZE" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IJ7-BC-8ZV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="YaW-rO-PRL" kind="relationship" relationship="rootViewController" id="hy5-rz-tl1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BfJ-gB-9yT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1641" y="152"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_menu" width="26" height="20"/>
+        <image name="mars_wallpapers" width="375" height="667"/>
+        <image name="mountain_wallpaper" width="320" height="569"/>
+    </resources>
+</document>
