@@ -131,10 +131,10 @@
             </objects>
             <point key="canvasLocation" x="1150" y="150"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--CustomPresentation-->
         <scene sceneID="GVF-u3-6no">
             <objects>
-                <viewControllerPlaceholder id="uJL-ED-LlT" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="CustomPresentation" id="uJL-ED-LlT" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SlW-Yp-Fqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1150" y="257"/>

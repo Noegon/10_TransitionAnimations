@@ -91,8 +91,6 @@
             fromView.frame = CGRectOffset(fromFrame,
                                           fromFrame.size.width * offset.dx,
                                           fromFrame.size.height * offset.dy);
-            
-            toView.transform = CGAffineTransformIdentity;
         }
     } completion:^(BOOL finished) {
         BOOL wasCancelled = [transitionContext transitionWasCancelled];
@@ -100,8 +98,6 @@
         if (wasCancelled) {
             [toView removeFromSuperview];
         }
-        
-        fromView.transform = CGAffineTransformIdentity;
         [transitionContext completeTransition:!wasCancelled];
     }];
 }
