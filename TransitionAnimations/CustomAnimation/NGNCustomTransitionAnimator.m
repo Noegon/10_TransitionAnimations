@@ -20,7 +20,7 @@
 @implementation NGNCustomTransitionAnimator
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
-    return 5.0;
+    return 2.0;
 }
 
 
@@ -89,8 +89,12 @@
     const CGFloat transitionSpacing = 160.f;
     NSTimeInterval transitionDuration = [self transitionDuration:transitionContext];
     
-    CGVector transitionVector = CGVectorMake(CGRectGetMinX(transitionContainer.bounds) - CGRectGetMaxX(transitionContainer.bounds),
-                                            CGRectGetMinY(transitionContainer.bounds) - CGRectGetMaxY(transitionContainer.bounds));
+//    CGVector transitionVector = CGVectorMake(CGRectGetMinX(transitionContainer.bounds) - CGRectGetMaxX(transitionContainer.bounds),
+//                                            CGRectGetMinY(transitionContainer.bounds) - CGRectGetMaxY(transitionContainer.bounds));
+    
+    CGVector transitionVector = CGVectorMake(CGRectGetMinX(transitionContainer.bounds) - CGRectGetMaxX(transitionContainer.bounds), 0);
+
+//    CGVector transitionVector = CGVectorMake(0, (CGRectGetMinY(transitionContainer.bounds) - CGRectGetMaxY(transitionContainer.bounds)));
     
     CGFloat transitionVectorLength = sqrtf( transitionVector.dx * transitionVector.dx + transitionVector.dy * transitionVector.dy );
     CGVector transitionUnitVector = CGVectorMake(transitionVector.dx / transitionVectorLength, transitionVector.dy / transitionVectorLength);
@@ -99,12 +103,18 @@
     for (NSUInteger y = 0 ; y < verticalSlices; y++) {
         for (NSUInteger x = 0; x < horizontalSlices; x++) {
             CALayer *fromContentLayer = [CALayer new];
-            fromContentLayer.frame = CGRectMake(x * sliceSize * -1.f, y * sliceSize * -1.f, containerView.bounds.size.width, containerView.bounds.size.height);
+            fromContentLayer.frame = CGRectMake(x * sliceSize * -1.f,
+                                                y * sliceSize * -1.f,
+                                                containerView.bounds.size.width,
+                                                containerView.bounds.size.height);
             fromContentLayer.rasterizationScale = fromViewSnapshot.scale;
             fromContentLayer.contents = (__bridge id)fromViewSnapshot.CGImage;
             
             CALayer *toContentLayer = [CALayer new];
-            toContentLayer.frame = CGRectMake(x * sliceSize * -1.f, y * sliceSize * -1.f, containerView.bounds.size.width, containerView.bounds.size.height);
+            toContentLayer.frame = CGRectMake(x * sliceSize * -1.f,
+                                              y * sliceSize * -1.f,
+                                              containerView.bounds.size.width,
+                                              containerView.bounds.size.height);
             
             // Snapshotting the toView was deferred so we must also defer applying
             // the snapshot to the layer's contents.
@@ -143,50 +153,57 @@
     // Used to track how many slices have animations which are still in flight.
     __block NSUInteger sliceAnimationsPending = 0;
 
-        for (NSUInteger y = 0; y < verticalSlices; y++) {
-            for (NSUInteger x = 0; x < horizontalSlices; x++) {
-                
-                UIView *toCheckboardSquareView = transitionContainer.subviews[y * horizontalSlices * 2 + (x * 2)];
-                UIView *fromCheckboardSquareView = transitionContainer.subviews[y * horizontalSlices * 2 + (x * 2 + 1)];
-                
-                CGVector  sliceOriginVector = CGVectorMake(CGRectGetMaxX(fromCheckboardSquareView.frame) - CGRectGetMaxX(transitionContainer.bounds),
-                                                           CGRectGetMaxY(fromCheckboardSquareView.frame) - CGRectGetMaxY(transitionContainer.bounds));
-                
-                // Project sliceOriginVector onto transitionVector.
-                CGFloat dot = sliceOriginVector.dx * transitionVector.dx + sliceOriginVector.dy * transitionVector.dy;
-                CGVector projection = CGVectorMake(transitionUnitVector.dx * dot/transitionVectorLength,
-                                                   transitionUnitVector.dy * dot/transitionVectorLength);
-                
-                // Compute the length of the projection.
-                CGFloat projectionLength = sqrtf( projection.dx * projection.dx + projection.dy * projection.dy );
-                
-                NSTimeInterval startTime = projectionLength/(transitionVectorLength + transitionSpacing) * transitionDuration;
-                NSTimeInterval duration = ( (projectionLength + transitionSpacing)/(transitionVectorLength + transitionSpacing) * transitionDuration ) - startTime;
-                
-                sliceAnimationsPending++;
-                
-                [self.animator addBehavior:self.gravity];
-                [self.gravity addItem:fromCheckboardSquareView];
-                
-                [UIView animateWithDuration:duration delay:startTime options:0 animations:^{
-                    fromCheckboardSquareView.alpha = 0;
-                    toCheckboardSquareView.alpha = 1;
-                } completion:^(BOOL finished) {
-                    // Finish the transition once the final animation completes.
-                    if (--sliceAnimationsPending == 0) {
-                        
-                        BOOL wasCancelled = [transitionContext transitionWasCancelled];
-                        
-                        [transitionContainer removeFromSuperview];
-                        
-                        // When we complete, tell the transition context
-                        // passing along the BOOL that indicates whether the transition
-                        // finished or not.
-                        [transitionContext completeTransition:!wasCancelled];
-                    }
-                }];
-            }
+    for (NSUInteger y = 0; y < verticalSlices; y++) {
+        for (NSUInteger x = 0; x < horizontalSlices; x++) {
+            
+            UIView *toCheckboardSquareView = transitionContainer.subviews[y * horizontalSlices * 2 + (x * 2)];
+            UIView *fromCheckboardSquareView = transitionContainer.subviews[y * horizontalSlices * 2 + (x * 2 + 1)];
+            
+            CGVector  sliceOriginVector;
+//            if (y % 2 == 0) {
+                sliceOriginVector = CGVectorMake(CGRectGetMidX(fromCheckboardSquareView.frame) - CGRectGetMidX(transitionContainer.bounds), 0);
+//            } else {
+//                sliceOriginVector = CGVectorMake(-(CGRectGetMaxX(fromCheckboardSquareView.frame) - CGRectGetMaxX(transitionContainer.bounds)), 0);
+//            }
+        
+//            sliceOriginVector = CGVectorMake(CGRectGetMaxX(fromCheckboardSquareView.frame) - CGRectGetMaxX(transitionContainer.bounds),
+//                                             CGRectGetMaxY(fromCheckboardSquareView.frame) - CGRectGetMaxY(transitionContainer.bounds));
+            
+            // Project sliceOriginVector onto transitionVector.
+            CGFloat dot = sliceOriginVector.dx * transitionVector.dx + sliceOriginVector.dy * transitionVector.dy;
+            CGVector projection = CGVectorMake(transitionUnitVector.dx * dot/transitionVectorLength,
+                                               transitionUnitVector.dy * dot/transitionVectorLength);
+            
+            // Compute the length of the projection.
+            CGFloat projectionLength = sqrtf( projection.dx * projection.dx + projection.dy * projection.dy );
+            
+            NSTimeInterval startTime = projectionLength/(transitionVectorLength + transitionSpacing) * transitionDuration;
+            NSTimeInterval duration = ( (projectionLength + transitionSpacing)/(transitionVectorLength + transitionSpacing) * transitionDuration ) - startTime;
+            
+            sliceAnimationsPending++;
+            
+            [self.animator addBehavior:self.gravity];
+            [self.gravity addItem:fromCheckboardSquareView];
+            
+            [UIView animateWithDuration:duration delay:startTime options:0 animations:^{
+                fromCheckboardSquareView.alpha = 0;
+                toCheckboardSquareView.alpha = 1;
+            } completion:^(BOOL finished) {
+                // Finish the transition once the final animation completes.
+                if (--sliceAnimationsPending == 0) {
+                    
+                    BOOL wasCancelled = [transitionContext transitionWasCancelled];
+                    
+                    [transitionContainer removeFromSuperview];
+                    
+                    // When we complete, tell the transition context
+                    // passing along the BOOL that indicates whether the transition
+                    // finished or not.
+                    [transitionContext completeTransition:!wasCancelled];
+                }
+            }];
         }
+    }
 }
 
 @end

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="71c-Tg-haI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="71c-Tg-haI">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="381" y="528"/>
         </scene>
-        <!--CustomPresentation-->
+        <!--Custom anim-->
         <scene sceneID="6fR-gd-9WY">
             <objects>
                 <viewController id="e8D-we-HPa" customClass="NGNCustomFirstViewController" sceneMemberID="viewController">
@@ -37,12 +37,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9X-Iy-367">
-                                <rect key="frame" x="169" y="296" width="76" height="144"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="120"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mars_wallpapers" translatesAutoresizingMaskIntoConstraints="NO" id="Xwj-rD-wge">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Rf-6d-bwD">
                                 <rect key="frame" x="0.0" y="686" width="414" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -58,17 +55,18 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.87778306007385254" green="0.87362140417098999" blue="0.99961543083190918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="c9X-Iy-367" secondAttribute="centerY" id="9KS-x8-BdW"/>
+                            <constraint firstItem="IpY-nH-yZ0" firstAttribute="top" secondItem="Xwj-rD-wge" secondAttribute="bottom" id="5p8-ua-rzG"/>
+                            <constraint firstItem="IpY-nH-yZ0" firstAttribute="top" secondItem="5Rf-6d-bwD" secondAttribute="bottom" id="8Re-BO-TM0"/>
                             <constraint firstAttribute="trailing" secondItem="5Rf-6d-bwD" secondAttribute="trailing" id="9zZ-Ur-Dsl"/>
-                            <constraint firstItem="IpY-nH-yZ0" firstAttribute="top" secondItem="5Rf-6d-bwD" secondAttribute="bottom" id="BiA-Ci-FIN"/>
+                            <constraint firstAttribute="trailing" secondItem="Xwj-rD-wge" secondAttribute="trailing" id="MwM-qp-vzu"/>
                             <constraint firstItem="5Rf-6d-bwD" firstAttribute="leading" secondItem="Dle-ho-gI3" secondAttribute="leading" id="WXC-xv-lPS"/>
-                            <constraint firstAttribute="centerX" secondItem="c9X-Iy-367" secondAttribute="centerX" id="oGg-ek-Ree"/>
+                            <constraint firstItem="Xwj-rD-wge" firstAttribute="leading" secondItem="Dle-ho-gI3" secondAttribute="leading" id="gSh-nG-MY5"/>
+                            <constraint firstItem="Xwj-rD-wge" firstAttribute="top" secondItem="Dle-ho-gI3" secondAttribute="top" id="q1o-ak-wnA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="CustomPresentation" id="cq5-uy-Ykt">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="5aB-Cc-nC6">
+                    <navigationItem key="navigationItem" title="Custom anim" id="cq5-uy-Ykt">
+                        <barButtonItem key="leftBarButtonItem" image="icon_menu" id="5aB-Cc-nC6">
                             <connections>
                                 <segue destination="vKG-QN-IDu" kind="unwind" unwindAction="unwindToMenuViewController:" id="nS5-qX-1e3"/>
                             </connections>
@@ -78,7 +76,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0bF-BR-Au8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="vKG-QN-IDu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1132" y="528"/>
+            <point key="canvasLocation" x="1131.8840579710145" y="527.44565217391312"/>
         </scene>
         <!--SecondViewController-->
         <scene sceneID="Ah1-F6-hAE">
@@ -92,23 +90,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGa-tL-cVJ">
-                                <rect key="frame" x="170" y="296" width="74" height="144"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="120"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cosmic_wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="Shf-Ee-11N">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="mGa-tL-cVJ" secondAttribute="centerX" id="Via-9v-PNo"/>
-                            <constraint firstAttribute="centerY" secondItem="mGa-tL-cVJ" secondAttribute="centerY" id="kyq-hn-r1z"/>
+                            <constraint firstItem="Shf-Ee-11N" firstAttribute="leading" secondItem="JfE-gs-HxA" secondAttribute="leading" id="QZL-bv-u43"/>
+                            <constraint firstAttribute="trailing" secondItem="Shf-Ee-11N" secondAttribute="trailing" id="UEp-FA-hnd"/>
+                            <constraint firstItem="Ze4-5Z-W9Y" firstAttribute="top" secondItem="Shf-Ee-11N" secondAttribute="bottom" id="WyO-ed-62A"/>
+                            <constraint firstItem="Shf-Ee-11N" firstAttribute="top" secondItem="JfE-gs-HxA" secondAttribute="top" id="bSU-je-qgy"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KMT-j1-pad" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1892" y="528"/>
+            <point key="canvasLocation" x="1891.304347826087" y="527.44565217391312"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cosmic_wallpaper" width="372" height="696"/>
+        <image name="icon_menu" width="26" height="20"/>
+        <image name="mars_wallpapers" width="375" height="667"/>
+    </resources>
 </document>
