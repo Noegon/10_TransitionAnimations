@@ -89,12 +89,7 @@
     const CGFloat transitionSpacing = 160.f;
     NSTimeInterval transitionDuration = [self transitionDuration:transitionContext];
     
-//    CGVector transitionVector = CGVectorMake(CGRectGetMinX(transitionContainer.bounds) - CGRectGetMaxX(transitionContainer.bounds),
-//                                            CGRectGetMinY(transitionContainer.bounds) - CGRectGetMaxY(transitionContainer.bounds));
-    
     CGVector transitionVector = CGVectorMake(CGRectGetMinX(transitionContainer.bounds) - CGRectGetMaxX(transitionContainer.bounds), 0);
-
-//    CGVector transitionVector = CGVectorMake(0, (CGRectGetMinY(transitionContainer.bounds) - CGRectGetMaxY(transitionContainer.bounds)));
     
     CGFloat transitionVectorLength = sqrtf( transitionVector.dx * transitionVector.dx + transitionVector.dy * transitionVector.dy );
     CGVector transitionUnitVector = CGVectorMake(transitionVector.dx / transitionVectorLength, transitionVector.dy / transitionVectorLength);
@@ -160,14 +155,8 @@
             UIView *fromCheckboardSquareView = transitionContainer.subviews[y * horizontalSlices * 2 + (x * 2 + 1)];
             
             CGVector  sliceOriginVector;
-//            if (y % 2 == 0) {
-                sliceOriginVector = CGVectorMake(CGRectGetMidX(fromCheckboardSquareView.frame) - CGRectGetMidX(transitionContainer.bounds), 0);
-//            } else {
-//                sliceOriginVector = CGVectorMake(-(CGRectGetMaxX(fromCheckboardSquareView.frame) - CGRectGetMaxX(transitionContainer.bounds)), 0);
-//            }
-        
-//            sliceOriginVector = CGVectorMake(CGRectGetMaxX(fromCheckboardSquareView.frame) - CGRectGetMaxX(transitionContainer.bounds),
-//                                             CGRectGetMaxY(fromCheckboardSquareView.frame) - CGRectGetMaxY(transitionContainer.bounds));
+
+            sliceOriginVector = CGVectorMake(CGRectGetMidX(fromCheckboardSquareView.frame) - CGRectGetMidX(transitionContainer.bounds), 0);
             
             // Project sliceOriginVector onto transitionVector.
             CGFloat dot = sliceOriginVector.dx * transitionVector.dx + sliceOriginVector.dy * transitionVector.dy;

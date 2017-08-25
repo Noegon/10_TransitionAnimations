@@ -26,6 +26,8 @@
 		4045387F1F50A1A200125AC3 /* CustomPresentation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4045387A1F50A1A200125AC3 /* CustomPresentation.storyboard */; };
 		404538801F50A1A200125AC3 /* NGNCustomFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4045387C1F50A1A200125AC3 /* NGNCustomFirstViewController.m */; };
 		404538811F50A1A200125AC3 /* NGNCustomTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4045387E1F50A1A200125AC3 /* NGNCustomTransitionAnimator.m */; };
+		404538861F50C6B800125AC3 /* NGNNavigableAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 404538831F50C6B800125AC3 /* NGNNavigableAnimator.m */; };
+		404538871F50C6B800125AC3 /* NGNNavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 404538851F50C6B800125AC3 /* NGNNavigationControllerDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,10 @@
 		4045387C1F50A1A200125AC3 /* NGNCustomFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGNCustomFirstViewController.m; path = CustomAnimation/NGNCustomFirstViewController.m; sourceTree = "<group>"; };
 		4045387D1F50A1A200125AC3 /* NGNCustomTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGNCustomTransitionAnimator.h; path = CustomAnimation/NGNCustomTransitionAnimator.h; sourceTree = "<group>"; };
 		4045387E1F50A1A200125AC3 /* NGNCustomTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGNCustomTransitionAnimator.m; path = CustomAnimation/NGNCustomTransitionAnimator.m; sourceTree = "<group>"; };
+		404538821F50C6B800125AC3 /* NGNNavigableAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGNNavigableAnimator.h; path = NavigationAnimation/NGNNavigableAnimator.h; sourceTree = "<group>"; };
+		404538831F50C6B800125AC3 /* NGNNavigableAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGNNavigableAnimator.m; path = NavigationAnimation/NGNNavigableAnimator.m; sourceTree = "<group>"; };
+		404538841F50C6B800125AC3 /* NGNNavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGNNavigationControllerDelegate.h; path = NavigationAnimation/NGNNavigationControllerDelegate.h; sourceTree = "<group>"; };
+		404538851F50C6B800125AC3 /* NGNNavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGNNavigationControllerDelegate.m; path = NavigationAnimation/NGNNavigationControllerDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,10 @@
 			isa = PBXGroup;
 			children = (
 				2584513E1F4DA5490085892E /* NavigablePresentation.storyboard */,
+				404538821F50C6B800125AC3 /* NGNNavigableAnimator.h */,
+				404538831F50C6B800125AC3 /* NGNNavigableAnimator.m */,
+				404538841F50C6B800125AC3 /* NGNNavigationControllerDelegate.h */,
+				404538851F50C6B800125AC3 /* NGNNavigationControllerDelegate.m */,
 				258451401F4DA6260085892E /* NGNNavigableFirstViewController.h */,
 				258451411F4DA6260085892E /* NGNNavigableFirstViewController.m */,
 				258451431F4DA63F0085892E /* NGNNavigableSecondViewController.h */,
@@ -241,10 +251,12 @@
 				251383361F4D7A010071AE26 /* NGNModalSecondViewController.m in Sources */,
 				255C81131F4D6B1D00874081 /* NGNMenuViewController.m in Sources */,
 				25762ADF1F4D9237001DB36C /* NGNCommonConstants.m in Sources */,
+				404538861F50C6B800125AC3 /* NGNNavigableAnimator.m in Sources */,
 				255C81101F4D6B1D00874081 /* AppDelegate.m in Sources */,
 				404538771F50A18E00125AC3 /* NGNModalPresentationAnimator.m in Sources */,
 				404538811F50A1A200125AC3 /* NGNCustomTransitionAnimator.m in Sources */,
 				404538801F50A1A200125AC3 /* NGNCustomFirstViewController.m in Sources */,
+				404538871F50C6B800125AC3 /* NGNNavigationControllerDelegate.m in Sources */,
 				258451451F4DA63F0085892E /* NGNNavigableSecondViewController.m in Sources */,
 				258451421F4DA6260085892E /* NGNNavigableFirstViewController.m in Sources */,
 				404538781F50A18E00125AC3 /* NGNModalPresentationTransitionDelegate.m in Sources */,
