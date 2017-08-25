@@ -10,19 +10,19 @@
 
 #pragma mark - segue names
 
-static const NSString *NGNSegueModalPresentation = @"NGNSegueModalPresentation";
-static const NSString *NGNSegueNavigationPresentation = @"NGNSegueNavigationPresentation";
-static const NSString *NGNSegueNavigationCustomPresentation = @"NGNSegueNavigationCustomPresentation";
+static NSString *const NGNSegueModalPresentation = @"NGNSegueModalPresentation";
+static NSString *const NGNSegueNavigationPresentation = @"NGNSegueNavigationPresentation";
+static NSString *const NGNSegueNavigationCustomPresentation = @"NGNSegueNavigationCustomPresentation";
 
 //ModalPresentation storyboard
-static const NSString *NGNSegueModalPresentationFirstToSecond = @"NGNSegueModalPresentationFirstToSecond";
-static const NSString *NGNSegueModalPresentationSecondToFirst = @"NGNSegueModalPresentationSecondToFirst";
+static NSString *const NGNSegueModalPresentationFirstToSecond = @"NGNSegueModalPresentationFirstToSecond";
+static NSString *const NGNSegueModalPresentationSecondToFirst = @"NGNSegueModalPresentationSecondToFirst";
 
 #pragma mark - storyboards Ids
 
-static const NSString *NGNStoryboardMain = @"Main";
-static const NSString *NGNStoryboardModalPresentation = @"ModalPresentation";
-static const NSString *NGNStoryboardNavigablePresentation = @"NavigablePresentation";
+static NSString *const NGNStoryboardMain = @"Main";
+static NSString *const NGNStoryboardModalPresentation = @"ModalPresentation";
+static NSString *const NGNStoryboardNavigablePresentation = @"NavigablePresentation";
 
 @interface NGNCommonConstants : NSObject
 

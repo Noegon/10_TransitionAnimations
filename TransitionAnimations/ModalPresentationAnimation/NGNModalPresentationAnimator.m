@@ -19,7 +19,7 @@
 }
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
-    return 0.3;
+    return 0.35;
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
@@ -40,6 +40,7 @@
         toView = toViewController.view;
     }
 
+    //check is this opoeration presenting or dismissing
     BOOL isPresenting = (toViewController.presentingViewController == fromViewController);
     
     CGRect fromFrame = [transitionContext initialFrameForViewController:fromViewController];
@@ -65,6 +66,7 @@
     }
     
     if (isPresenting) {
+        //to draw out toView from the edge of the screen, its offset sould fully hide view beyound the edge
         fromView.frame = fromFrame;
         toView.frame = CGRectOffset(toFrame, toFrame.size.width * offset.dx * -1,
                                              toFrame.size.height * offset.dy * -1);
@@ -86,18 +88,20 @@
         if (isPresenting) {
             toView.frame = toFrame;
         } else {
-
-            fromView.frame = CGRectOffset(fromFrame, fromFrame.size.width * offset.dx,
-                                                     fromFrame.size.height * offset.dy);
+            fromView.frame = CGRectOffset(fromFrame,
+                                          fromFrame.size.width * offset.dx,
+                                          fromFrame.size.height * offset.dy);
+            
+            toView.transform = CGAffineTransformIdentity;
         }
-        
     } completion:^(BOOL finished) {
         BOOL wasCancelled = [transitionContext transitionWasCancelled];
         
         if (wasCancelled) {
             [toView removeFromSuperview];
         }
-
+        
+        fromView.transform = CGAffineTransformIdentity;
         [transitionContext completeTransition:!wasCancelled];
     }];
 }

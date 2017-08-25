@@ -10,9 +10,11 @@
 
 @interface NGNModalTransitionInteractionController ()
 
-@property (nonatomic, weak) id<UIViewControllerContextTransitioning> transitionContext;
-@property (nonatomic, strong, readonly) UIScreenEdgePanGestureRecognizer *gestureRecognizer;
-@property (nonatomic, readonly) UIRectEdge edge;
+@property (weak, nonatomic) id<UIViewControllerContextTransitioning> transitionContext;
+@property (strong, nonatomic, readonly) UIScreenEdgePanGestureRecognizer *gestureRecognizer;
+@property (assign, nonatomic, readonly) UIRectEdge edge;
+
+@property (assign, nonatomic, getter=isInteractionInProgress) BOOL interactionInProgress;
 
 @end
 
@@ -81,6 +83,7 @@
             // The Began state is handled by the view controllers.  In response
             // to the gesture recognizer transitioning to this state, they
             // will trigger the presentation or dismissal.
+            self.interactionInProgress = YES;
             break;
         case UIGestureRecognizerStateChanged:
             // We have been dragging! Update the transition context accordingly.
@@ -89,9 +92,14 @@
         case UIGestureRecognizerStateEnded:
             // Dragging has finished.
             // Complete or cancel, depending on how far we've dragged.
+            
+            // TODO: Animation of cancel or finish is unsmooth!
+            // There is some kind of wide ugly black line near the target edge. Should to find out why.
             if ([self percentForGesture:gestureRecognizer] >= 0.5f) {
+                [self updateInteractiveTransition:1];
                 [self finishInteractiveTransition];
             } else {
+                [self updateInteractiveTransition:0];
                 [self cancelInteractiveTransition];
             }
             break;
