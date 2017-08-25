@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jUE-S9-PZE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountain_wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="Tf6-28-5Dq">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8E-O0-wWr">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
@@ -38,12 +38,12 @@
                         </subviews>
                         <color key="backgroundColor" red="0.4366127642" green="0.59543187539999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Tf6-28-5Dq" firstAttribute="top" secondItem="oQe-vQ-TvX" secondAttribute="bottom" id="3TL-7T-i63"/>
                             <constraint firstItem="J8E-O0-wWr" firstAttribute="leading" secondItem="LWh-1q-nFW" secondAttribute="leading" id="4sl-PR-IRM"/>
                             <constraint firstAttribute="trailing" secondItem="Tf6-28-5Dq" secondAttribute="trailing" id="7Oc-Cr-geK"/>
                             <constraint firstItem="xno-Fb-oRP" firstAttribute="top" secondItem="J8E-O0-wWr" secondAttribute="bottom" id="BRa-Vo-v6x"/>
                             <constraint firstItem="xno-Fb-oRP" firstAttribute="top" secondItem="Tf6-28-5Dq" secondAttribute="bottom" id="Vdi-fC-Xrs"/>
                             <constraint firstAttribute="trailing" secondItem="J8E-O0-wWr" secondAttribute="trailing" id="W4I-29-UyE"/>
+                            <constraint firstItem="Tf6-28-5Dq" firstAttribute="top" secondItem="LWh-1q-nFW" secondAttribute="top" id="ror-lc-ZOQ"/>
                             <constraint firstItem="Tf6-28-5Dq" firstAttribute="leading" secondItem="LWh-1q-nFW" secondAttribute="leading" id="vhi-8o-JQZ"/>
                         </constraints>
                     </view>
@@ -59,7 +59,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cUn-Ac-oQs" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="LsA-U4-xRr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2476" y="152"/>
+            <point key="canvasLocation" x="2476" y="151.57421289355324"/>
         </scene>
         <!--Second Navigable-->
         <scene sceneID="tBr-Xa-oFL">
@@ -74,14 +74,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mars_wallpapers" translatesAutoresizingMaskIntoConstraints="NO" id="z26-ln-Vh7">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="z26-ln-Vh7" firstAttribute="leading" secondItem="O1f-Nc-Qdz" secondAttribute="leading" id="090-oo-GA2"/>
                             <constraint firstAttribute="trailing" secondItem="z26-ln-Vh7" secondAttribute="trailing" id="13K-qh-0xg"/>
-                            <constraint firstItem="z26-ln-Vh7" firstAttribute="top" secondItem="bNn-KW-yJ4" secondAttribute="bottom" id="iRI-UK-ZMl"/>
+                            <constraint firstItem="z26-ln-Vh7" firstAttribute="top" secondItem="O1f-Nc-Qdz" secondAttribute="top" id="XGh-6n-bSZ"/>
                             <constraint firstItem="ieo-n5-nMf" firstAttribute="top" secondItem="z26-ln-Vh7" secondAttribute="bottom" id="qrZ-A6-xRL"/>
                         </constraints>
                     </view>
@@ -102,10 +102,16 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
+                        <outlet property="delegate" destination="Oy6-pd-h9J" id="QA1-eT-ufe"/>
                         <segue destination="YaW-rO-PRL" kind="relationship" relationship="rootViewController" id="hy5-rz-tl1"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BfJ-gB-9yT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="Oy6-pd-h9J" customClass="NGNNavigationControllerDelegate">
+                    <connections>
+                        <outlet property="navigationController" destination="jUE-S9-PZE" id="Ocm-dI-R7Q"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="1641" y="152"/>
         </scene>

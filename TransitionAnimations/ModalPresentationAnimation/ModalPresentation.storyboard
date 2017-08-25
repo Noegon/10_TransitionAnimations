@@ -22,48 +22,63 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aqua_wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="nqw-X8-Ugm">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gq2-fS-Re4">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="eHo-yX-PqV"/>
                                 </constraints>
                                 <state key="normal" title="Present second controller"/>
                                 <connections>
-                                    <segue destination="HnC-QX-gEO" kind="presentation" id="ioA-Ds-dx1"/>
+                                    <segue destination="HnC-QX-gEO" kind="presentation" identifier="NGNSegueModalPresentationFirstToSecond" id="ioA-Ds-dx1"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.4366127642" green="0.59543187539999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Jui-au-uH5" firstAttribute="top" secondItem="nqw-X8-Ugm" secondAttribute="bottom" id="5Jz-yT-uVQ"/>
+                            <constraint firstItem="nqw-X8-Ugm" firstAttribute="top" secondItem="Jtg-vE-p8W" secondAttribute="top" id="Cmh-kI-eea"/>
                             <constraint firstAttribute="trailing" secondItem="nqw-X8-Ugm" secondAttribute="trailing" id="UZB-Zj-aVa"/>
                             <constraint firstItem="Jui-au-uH5" firstAttribute="top" secondItem="Gq2-fS-Re4" secondAttribute="bottom" id="WBD-S5-3GB"/>
                             <constraint firstItem="Gq2-fS-Re4" firstAttribute="leading" secondItem="Jtg-vE-p8W" secondAttribute="leading" id="Wd7-eB-dpM"/>
                             <constraint firstItem="nqw-X8-Ugm" firstAttribute="leading" secondItem="Jtg-vE-p8W" secondAttribute="leading" id="Zp2-2O-iYI"/>
                             <constraint firstAttribute="trailing" secondItem="Gq2-fS-Re4" secondAttribute="trailing" id="lWY-Oi-UkR"/>
-                            <constraint firstItem="nqw-X8-Ugm" firstAttribute="top" secondItem="wgH-vJ-GHY" secondAttribute="bottom" id="qyu-zJ-ECD"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="F1e-ud-TiL" appends="YES" id="OP3-GZ-HpR"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Modal presentation" id="s7J-ub-mfG">
                         <barButtonItem key="leftBarButtonItem" image="icon_menu" id="oXJ-uo-b5W">
                             <connections>
-                                <segue destination="Qg0-Be-91I" kind="unwind" unwindAction="unwindToMenuViewController:" id="cSY-iF-ynE"/>
+                                <segue destination="Qg0-Be-91I" kind="unwind" identifier="NGNSegueModalPresentationSecondToFirst" unwindAction="unwindToMenuViewController:" id="cSY-iF-ynE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="interactiveTransitionRecognizer" destination="F1e-ud-TiL" id="hz3-dc-tfh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xDp-k7-FIW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Qg0-Be-91I" userLabel="Exit" sceneMemberID="exit"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="F1e-ud-TiL">
+                    <rectEdge key="edges" left="YES"/>
+                    <connections>
+                        <action selector="interactiveTransitionRecognizerAction:" destination="LU9-NQ-Nff" id="5KA-XS-XPZ"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2369" y="-310"/>
+            <point key="canvasLocation" x="2368.8000000000002" y="-310.79460269865069"/>
         </scene>
         <!--Modal Second View Controller-->
         <scene sceneID="9WB-t1-tiY">
             <objects>
-                <viewController id="HnC-QX-gEO" customClass="NGNModalSecondViewController" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="HnC-QX-gEO" customClass="NGNModalSecondViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="T9i-Jf-6j1"/>
                         <viewControllerLayoutGuide type="bottom" id="Gya-FO-8Hn"/>
@@ -73,7 +88,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cosmic_wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="AyP-Ov-955">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQR-hw-U6D">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
@@ -83,26 +99,39 @@
                                 </constraints>
                                 <state key="normal" title="Dismiss to primary controller"/>
                                 <connections>
-                                    <segue destination="p2f-cB-LqC" kind="unwind" unwindAction="unwindToModalFirstViewController:" id="Zog-SB-ZT4"/>
+                                    <segue destination="p2f-cB-LqC" kind="unwind" identifier="NGNSegueModalPresentationSecondToFirst" unwindAction="unwindToModalFirstViewController:" id="Wp3-Vn-4Xx"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="lQR-hw-U6D" firstAttribute="leading" secondItem="n0C-j1-wLh" secondAttribute="leading" id="6nR-iX-zhl"/>
                             <constraint firstItem="Gya-FO-8Hn" firstAttribute="top" secondItem="lQR-hw-U6D" secondAttribute="bottom" id="9cW-7O-hsq"/>
                             <constraint firstItem="Gya-FO-8Hn" firstAttribute="top" secondItem="AyP-Ov-955" secondAttribute="bottom" id="PE5-gs-eh4"/>
-                            <constraint firstItem="AyP-Ov-955" firstAttribute="top" secondItem="T9i-Jf-6j1" secondAttribute="bottom" id="T88-Ux-k3l"/>
                             <constraint firstItem="AyP-Ov-955" firstAttribute="leading" secondItem="n0C-j1-wLh" secondAttribute="leading" id="bE1-XD-P81"/>
                             <constraint firstAttribute="trailing" secondItem="lQR-hw-U6D" secondAttribute="trailing" id="lPy-zs-Gcw"/>
+                            <constraint firstItem="AyP-Ov-955" firstAttribute="top" secondItem="n0C-j1-wLh" secondAttribute="top" id="npk-lg-Ow3"/>
                             <constraint firstAttribute="trailing" secondItem="AyP-Ov-955" secondAttribute="trailing" id="yIS-gb-4v7"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="97B-Mb-k5y" appends="YES" id="ssa-PA-s59"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="interactiveTransitionRecognizer" destination="97B-Mb-k5y" id="gwF-Az-qcv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="heA-Tm-2Qm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="p2f-cB-LqC" userLabel="Exit" sceneMemberID="exit"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="97B-Mb-k5y">
+                    <rectEdge key="edges" right="YES"/>
+                    <connections>
+                        <action selector="interactiveTransitionRecognizerAction:" destination="HnC-QX-gEO" id="i72-om-X9A"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3154" y="-311"/>
+            <point key="canvasLocation" x="3177" y="-312"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ru1-mz-0uD">
