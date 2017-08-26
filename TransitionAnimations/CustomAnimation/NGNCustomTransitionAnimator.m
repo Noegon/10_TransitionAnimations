@@ -12,15 +12,12 @@
 
 @interface NGNCustomTransitionAnimator ()
 
-@property (strong, nonatomic) UIDynamicAnimator *animator;
-@property (strong, nonatomic) UIGravityBehavior *gravity;
-
 @end
 
 @implementation NGNCustomTransitionAnimator
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
-    return 2.0;
+    return 1.25;
 }
 
 
@@ -44,6 +41,8 @@
         fromView = fromViewController.view;
         toView = toViewController.view;
     }
+    
+    BOOL isPush = ([toViewController.navigationController.viewControllers indexOfObject:toViewController] > [fromViewController.navigationController.viewControllers indexOfObject:fromViewController]);
     
     fromView.frame = [transitionContext initialFrameForViewController:fromViewController];
     toView.frame = [transitionContext finalFrameForViewController:toViewController];
@@ -155,8 +154,16 @@
             UIView *fromCheckboardSquareView = transitionContainer.subviews[y * horizontalSlices * 2 + (x * 2 + 1)];
             
             CGVector  sliceOriginVector;
-
-            sliceOriginVector = CGVectorMake(CGRectGetMidX(fromCheckboardSquareView.frame) - CGRectGetMidX(transitionContainer.bounds), 0);
+            
+            if (isPush) {
+                sliceOriginVector = CGVectorMake(CGRectGetMidX(fromCheckboardSquareView.frame) - CGRectGetMidX(transitionContainer.bounds), 0);
+            } else {
+                if (y % 2 == 0) {
+                    sliceOriginVector = CGVectorMake(CGRectGetMidX(fromCheckboardSquareView.frame) - CGRectGetMidX(transitionContainer.bounds), 0);
+                } else {
+                    sliceOriginVector = CGVectorMake(-(CGRectGetMidX(fromCheckboardSquareView.frame)) - CGRectGetMidX(transitionContainer.bounds), 0);
+                }
+            }
             
             // Project sliceOriginVector onto transitionVector.
             CGFloat dot = sliceOriginVector.dx * transitionVector.dx + sliceOriginVector.dy * transitionVector.dy;
@@ -170,9 +177,6 @@
             NSTimeInterval duration = ( (projectionLength + transitionSpacing)/(transitionVectorLength + transitionSpacing) * transitionDuration ) - startTime;
             
             sliceAnimationsPending++;
-            
-            [self.animator addBehavior:self.gravity];
-            [self.gravity addItem:fromCheckboardSquareView];
             
             [UIView animateWithDuration:duration delay:startTime options:0 animations:^{
                 fromCheckboardSquareView.alpha = 0;
