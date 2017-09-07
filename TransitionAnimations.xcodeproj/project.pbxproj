@@ -7,15 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		250C29941F4EEB4A00EAFB78 /* NGNNavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 250C29931F4EEB4A00EAFB78 /* NGNNavigationControllerDelegate.m */; };
+		250C29971F4EEC1900EAFB78 /* NGNNavigableAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 250C29961F4EEC1900EAFB78 /* NGNNavigableAnimator.m */; };
+		251383331F4D79E10071AE26 /* NGNModalFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 251383321F4D79E10071AE26 /* NGNModalFirstViewController.m */; };
+		251383361F4D7A010071AE26 /* NGNModalSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 251383351F4D7A010071AE26 /* NGNModalSecondViewController.m */; };
+		254ABA701F50175B00B909BC /* NGNModalTransitionInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 254ABA6F1F50175B00B909BC /* NGNModalTransitionInteractionController.m */; };
+		254ABA751F5019EA00B909BC /* NGNModalPresentationAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 254ABA721F5019EA00B909BC /* NGNModalPresentationAnimator.m */; };
+		254ABA761F5019EA00B909BC /* NGNModalPresentationTransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 254ABA741F5019EA00B909BC /* NGNModalPresentationTransitionDelegate.m */; };
+		254DCBB51F5075A9008812A3 /* NGNCustomFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 254DCBB11F5075A9008812A3 /* NGNCustomFirstViewController.m */; };
+		254DCBB71F5075A9008812A3 /* CustomPresentation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 254DCBB41F5075A9008812A3 /* CustomPresentation.storyboard */; };
 		255C810D1F4D6B1D00874081 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 255C810C1F4D6B1D00874081 /* main.m */; };
 		255C81101F4D6B1D00874081 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 255C810F1F4D6B1D00874081 /* AppDelegate.m */; };
 		255C81131F4D6B1D00874081 /* NGNMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255C81121F4D6B1D00874081 /* NGNMenuViewController.m */; };
 		255C81161F4D6B1D00874081 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 255C81141F4D6B1D00874081 /* Main.storyboard */; };
 		255C81181F4D6B1E00874081 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 255C81171F4D6B1E00874081 /* Assets.xcassets */; };
 		255C811B1F4D6B1E00874081 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 255C81191F4D6B1E00874081 /* LaunchScreen.storyboard */; };
+		25762ADF1F4D9237001DB36C /* NGNCommonConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 25762ADE1F4D9237001DB36C /* NGNCommonConstants.m */; };
+		2584513D1F4DA42F0085892E /* ModalPresentation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2584513C1F4DA42F0085892E /* ModalPresentation.storyboard */; };
+		2584513F1F4DA5490085892E /* NavigablePresentation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2584513E1F4DA5490085892E /* NavigablePresentation.storyboard */; };
+		258451421F4DA6260085892E /* NGNNavigableFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 258451411F4DA6260085892E /* NGNNavigableFirstViewController.m */; };
+		258451451F4DA63F0085892E /* NGNNavigableSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 258451441F4DA63F0085892E /* NGNNavigableSecondViewController.m */; };
+		25C5857A1F4EFDEC0009C939 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25C585791F4EFDEC0009C939 /* UIKit.framework */; };
+		25C5857C1F4EFE1D0009C939 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25C5857B1F4EFE1D0009C939 /* Foundation.framework */; };
+		25C5857E1F4EFE240009C939 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25C5857D1F4EFE240009C939 /* CoreGraphics.framework */; };
+		25F0B82E1F54117600239081 /* NGNCustomTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F0B82C1F54117600239081 /* NGNCustomTransitionAnimator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		250C29921F4EEB4A00EAFB78 /* NGNNavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGNNavigationControllerDelegate.h; path = NavigationAnimation/NGNNavigationControllerDelegate.h; sourceTree = "<group>"; };
+		250C29931F4EEB4A00EAFB78 /* NGNNavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGNNavigationControllerDelegate.m; path = NavigationAnimation/NGNNavigationControllerDelegate.m; sourceTree = "<group>"; };
+		250C29951F4EEC1900EAFB78 /* NGNNavigableAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGNNavigableAnimator.h; path = NavigationAnimation/NGNNavigableAnimator.h; sourceTree = "<group>"; };
+		250C29961F4EEC1900EAFB78 /* NGNNavigableAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGNNavigableAnimator.m; path = NavigationAnimation/NGNNavigableAnimator.m; sourceTree = "<group>"; };
+		251383311F4D79E10071AE26 /* NGNModalFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGNModalFirstViewController.h; path = ModalPresentationAnimation/NGNModalFirstViewController.h; sourceTree = "<group>"; };
+		251383321F4D79E10071AE26 /* NGNModalFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGNModalFirstViewController.m; path = ModalPresentationAnimation/NGNModalFirstViewController.m; sourceTree = "<group>"; };
+		251383341F4D7A010071AE26 /* NGNModalSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGNModalSecondViewController.h; path = ModalPresentationAnimation/NGNModalSecondViewController.h; sourceTree = "<group>"; };
+		251383351F4D7A010071AE26 /* NGNModalSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGNModalSecondViewController.m; path = ModalPresentationAnimation/NGNModalSecondViewController.m; sourceTree = "<group>"; };
+		254ABA6E1F50175B00B909BC /* NGNModalTransitionInteractionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGNModalTransitionInteractionController.h; path = ModalPresentationAnimation/NGNModalTransitionInteractionController.h; sourceTree = "<group>"; };
+		254ABA6F1F50175B00B909BC /* NGNModalTransitionInteractionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGNModalTransitionInteractionController.m; path = ModalPresentationAnimation/NGNModalTransitionInteractionController.m; sourceTree = "<group>"; };
+		254ABA711F5019EA00B909BC /* NGNModalPresentationAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGNModalPresentationAnimator.h; path = ModalPresentationAnimation/NGNModalPresentationAnimator.h; sourceTree = "<group>"; };
+		254ABA721F5019EA00B909BC /* NGNModalPresentationAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGNModalPresentationAnimator.m; path = ModalPresentationAnimation/NGNModalPresentationAnimator.m; sourceTree = "<group>"; };
+		254ABA731F5019EA00B909BC /* NGNModalPresentationTransitionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGNModalPresentationTransitionDelegate.h; path = ModalPresentationAnimation/NGNModalPresentationTransitionDelegate.h; sourceTree = "<group>"; };
+		254ABA741F5019EA00B909BC /* NGNModalPresentationTransitionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGNModalPresentationTransitionDelegate.m; path = ModalPresentationAnimation/NGNModalPresentationTransitionDelegate.m; sourceTree = "<group>"; };
+		254DCBB01F5075A9008812A3 /* NGNCustomFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGNCustomFirstViewController.h; path = CustomAnimation/NGNCustomFirstViewController.h; sourceTree = "<group>"; };
+		254DCBB11F5075A9008812A3 /* NGNCustomFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGNCustomFirstViewController.m; path = CustomAnimation/NGNCustomFirstViewController.m; sourceTree = "<group>"; };
+		254DCBB21F5075A9008812A3 /* NGNCustomTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGNCustomTransitionAnimator.h; path = CustomAnimation/NGNCustomTransitionAnimator.h; sourceTree = "<group>"; };
+		254DCBB41F5075A9008812A3 /* CustomPresentation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CustomPresentation.storyboard; path = CustomAnimation/CustomPresentation.storyboard; sourceTree = "<group>"; };
 		255C81081F4D6B1D00874081 /* TransitionAnimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitionAnimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		255C810C1F4D6B1D00874081 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		255C810E1F4D6B1D00874081 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +62,18 @@
 		255C81171F4D6B1E00874081 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		255C811A1F4D6B1E00874081 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		255C811C1F4D6B1E00874081 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25762ADD1F4D9237001DB36C /* NGNCommonConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGNCommonConstants.h; sourceTree = "<group>"; };
+		25762ADE1F4D9237001DB36C /* NGNCommonConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGNCommonConstants.m; sourceTree = "<group>"; };
+		2584513C1F4DA42F0085892E /* ModalPresentation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ModalPresentation.storyboard; path = ModalPresentationAnimation/ModalPresentation.storyboard; sourceTree = "<group>"; };
+		2584513E1F4DA5490085892E /* NavigablePresentation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = NavigablePresentation.storyboard; path = NavigationAnimation/NavigablePresentation.storyboard; sourceTree = "<group>"; };
+		258451401F4DA6260085892E /* NGNNavigableFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGNNavigableFirstViewController.h; path = NavigationAnimation/NGNNavigableFirstViewController.h; sourceTree = "<group>"; };
+		258451411F4DA6260085892E /* NGNNavigableFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGNNavigableFirstViewController.m; path = NavigationAnimation/NGNNavigableFirstViewController.m; sourceTree = "<group>"; };
+		258451431F4DA63F0085892E /* NGNNavigableSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGNNavigableSecondViewController.h; path = NavigationAnimation/NGNNavigableSecondViewController.h; sourceTree = "<group>"; };
+		258451441F4DA63F0085892E /* NGNNavigableSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGNNavigableSecondViewController.m; path = NavigationAnimation/NGNNavigableSecondViewController.m; sourceTree = "<group>"; };
+		25C585791F4EFDEC0009C939 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		25C5857B1F4EFE1D0009C939 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		25C5857D1F4EFE240009C939 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		25F0B82C1F54117600239081 /* NGNCustomTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGNCustomTransitionAnimator.m; path = CustomAnimation/NGNCustomTransitionAnimator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +81,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25C5857E1F4EFE240009C939 /* CoreGraphics.framework in Frameworks */,
+				25C5857C1F4EFE1D0009C939 /* Foundation.framework in Frameworks */,
+				25C5857A1F4EFDEC0009C939 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2513832D1F4D73490071AE26 /* ModalPresentationAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				2584513C1F4DA42F0085892E /* ModalPresentation.storyboard */,
+				251383311F4D79E10071AE26 /* NGNModalFirstViewController.h */,
+				251383321F4D79E10071AE26 /* NGNModalFirstViewController.m */,
+				251383341F4D7A010071AE26 /* NGNModalSecondViewController.h */,
+				251383351F4D7A010071AE26 /* NGNModalSecondViewController.m */,
+				254ABA731F5019EA00B909BC /* NGNModalPresentationTransitionDelegate.h */,
+				254ABA741F5019EA00B909BC /* NGNModalPresentationTransitionDelegate.m */,
+				254ABA6E1F50175B00B909BC /* NGNModalTransitionInteractionController.h */,
+				254ABA6F1F50175B00B909BC /* NGNModalTransitionInteractionController.m */,
+				254ABA711F5019EA00B909BC /* NGNModalPresentationAnimator.h */,
+				254ABA721F5019EA00B909BC /* NGNModalPresentationAnimator.m */,
+			);
+			name = ModalPresentationAnimation;
+			sourceTree = "<group>";
+		};
+		2513832E1F4D75CE0071AE26 /* NavigationAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				2584513E1F4DA5490085892E /* NavigablePresentation.storyboard */,
+				258451401F4DA6260085892E /* NGNNavigableFirstViewController.h */,
+				258451411F4DA6260085892E /* NGNNavigableFirstViewController.m */,
+				258451431F4DA63F0085892E /* NGNNavigableSecondViewController.h */,
+				258451441F4DA63F0085892E /* NGNNavigableSecondViewController.m */,
+				250C29921F4EEB4A00EAFB78 /* NGNNavigationControllerDelegate.h */,
+				250C29931F4EEB4A00EAFB78 /* NGNNavigationControllerDelegate.m */,
+				250C29951F4EEC1900EAFB78 /* NGNNavigableAnimator.h */,
+				250C29961F4EEC1900EAFB78 /* NGNNavigableAnimator.m */,
+			);
+			name = NavigationAnimation;
+			sourceTree = "<group>";
+		};
 		255C80FF1F4D6B1D00874081 = {
 			isa = PBXGroup;
 			children = (
 				255C810A1F4D6B1D00874081 /* TransitionAnimations */,
 				255C81091F4D6B1D00874081 /* Products */,
+				25C585781F4EFDEB0009C939 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +144,11 @@
 		255C810A1F4D6B1D00874081 /* TransitionAnimations */ = {
 			isa = PBXGroup;
 			children = (
+				25762ADD1F4D9237001DB36C /* NGNCommonConstants.h */,
+				25762ADE1F4D9237001DB36C /* NGNCommonConstants.m */,
+				2513832D1F4D73490071AE26 /* ModalPresentationAnimation */,
+				2513832E1F4D75CE0071AE26 /* NavigationAnimation */,
+				258451481F4DA98E0085892E /* CustomAnimation */,
 				255C810E1F4D6B1D00874081 /* AppDelegate.h */,
 				255C810F1F4D6B1D00874081 /* AppDelegate.m */,
 				255C81111F4D6B1D00874081 /* NGNMenuViewController.h */,
@@ -77,6 +168,28 @@
 				255C810C1F4D6B1D00874081 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		258451481F4DA98E0085892E /* CustomAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				254DCBB41F5075A9008812A3 /* CustomPresentation.storyboard */,
+				254DCBB01F5075A9008812A3 /* NGNCustomFirstViewController.h */,
+				254DCBB11F5075A9008812A3 /* NGNCustomFirstViewController.m */,
+				254DCBB21F5075A9008812A3 /* NGNCustomTransitionAnimator.h */,
+				25F0B82C1F54117600239081 /* NGNCustomTransitionAnimator.m */,
+			);
+			name = CustomAnimation;
+			sourceTree = "<group>";
+		};
+		25C585781F4EFDEB0009C939 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25C5857D1F4EFE240009C939 /* CoreGraphics.framework */,
+				25C5857B1F4EFE1D0009C939 /* Foundation.framework */,
+				25C585791F4EFDEC0009C939 /* UIKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +251,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2584513D1F4DA42F0085892E /* ModalPresentation.storyboard in Resources */,
 				255C811B1F4D6B1E00874081 /* LaunchScreen.storyboard in Resources */,
+				2584513F1F4DA5490085892E /* NavigablePresentation.storyboard in Resources */,
+				254DCBB71F5075A9008812A3 /* CustomPresentation.storyboard in Resources */,
 				255C81181F4D6B1E00874081 /* Assets.xcassets in Resources */,
 				255C81161F4D6B1D00874081 /* Main.storyboard in Resources */,
 			);
@@ -151,9 +267,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				254ABA701F50175B00B909BC /* NGNModalTransitionInteractionController.m in Sources */,
+				250C29971F4EEC1900EAFB78 /* NGNNavigableAnimator.m in Sources */,
+				251383361F4D7A010071AE26 /* NGNModalSecondViewController.m in Sources */,
 				255C81131F4D6B1D00874081 /* NGNMenuViewController.m in Sources */,
+				25762ADF1F4D9237001DB36C /* NGNCommonConstants.m in Sources */,
 				255C81101F4D6B1D00874081 /* AppDelegate.m in Sources */,
+				254ABA761F5019EA00B909BC /* NGNModalPresentationTransitionDelegate.m in Sources */,
+				258451451F4DA63F0085892E /* NGNNavigableSecondViewController.m in Sources */,
+				254DCBB51F5075A9008812A3 /* NGNCustomFirstViewController.m in Sources */,
+				258451421F4DA6260085892E /* NGNNavigableFirstViewController.m in Sources */,
+				25F0B82E1F54117600239081 /* NGNCustomTransitionAnimator.m in Sources */,
+				254ABA751F5019EA00B909BC /* NGNModalPresentationAnimator.m in Sources */,
 				255C810D1F4D6B1D00874081 /* main.m in Sources */,
+				251383331F4D79E10071AE26 /* NGNModalFirstViewController.m in Sources */,
+				250C29941F4EEB4A00EAFB78 /* NGNNavigationControllerDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

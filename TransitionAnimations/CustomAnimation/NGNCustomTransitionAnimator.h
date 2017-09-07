@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  NGNCustomTransitionAnimator.m
 //  TransitionAnimations
 //
 //  Created by Stafeyev Alexei on 23/08/2017.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NGNMenuViewController : UITableViewController
-
+@interface NGNCustomTransitionAnimator : NSObject <UIViewControllerAnimatedTransitioning>
 
 @end
-
