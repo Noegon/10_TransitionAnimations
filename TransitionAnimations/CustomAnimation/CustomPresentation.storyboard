@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="71c-Tg-haI">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="B8F-Op-1cj">
+            <objects>
+                <navigationController id="71c-Tg-haI" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VHx-z2-gVn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="e8D-we-HPa" kind="relationship" relationship="rootViewController" id="dYl-Ph-CH6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nXI-r1-OT9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="381" y="528"/>
+        </scene>
+        <!--Custom anim-->
+        <scene sceneID="6fR-gd-9WY">
+            <objects>
+                <viewController id="e8D-we-HPa" customClass="NGNCustomFirstViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LMw-qI-bCv"/>
+                        <viewControllerLayoutGuide type="bottom" id="IpY-nH-yZ0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dle-ho-gI3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mars_wallpapers" translatesAutoresizingMaskIntoConstraints="NO" id="Xwj-rD-wge">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Rf-6d-bwD">
+                                <rect key="frame" x="0.0" y="686" width="414" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7S3-BV-TJd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Push with Custom Transition">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Qht-ZA-eyi" kind="show" id="nkf-HL-Tsl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="IpY-nH-yZ0" firstAttribute="top" secondItem="Xwj-rD-wge" secondAttribute="bottom" id="5p8-ua-rzG"/>
+                            <constraint firstItem="IpY-nH-yZ0" firstAttribute="top" secondItem="5Rf-6d-bwD" secondAttribute="bottom" id="8Re-BO-TM0"/>
+                            <constraint firstAttribute="trailing" secondItem="5Rf-6d-bwD" secondAttribute="trailing" id="9zZ-Ur-Dsl"/>
+                            <constraint firstAttribute="trailing" secondItem="Xwj-rD-wge" secondAttribute="trailing" id="MwM-qp-vzu"/>
+                            <constraint firstItem="5Rf-6d-bwD" firstAttribute="leading" secondItem="Dle-ho-gI3" secondAttribute="leading" id="WXC-xv-lPS"/>
+                            <constraint firstItem="Xwj-rD-wge" firstAttribute="leading" secondItem="Dle-ho-gI3" secondAttribute="leading" id="gSh-nG-MY5"/>
+                            <constraint firstItem="Xwj-rD-wge" firstAttribute="top" secondItem="Dle-ho-gI3" secondAttribute="top" id="q1o-ak-wnA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Custom anim" id="cq5-uy-Ykt">
+                        <barButtonItem key="leftBarButtonItem" image="icon_menu" id="5aB-Cc-nC6">
+                            <connections>
+                                <segue destination="vKG-QN-IDu" kind="unwind" unwindAction="unwindToMenuViewController:" id="nS5-qX-1e3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0bF-BR-Au8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="vKG-QN-IDu" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1131.8840579710145" y="527.44565217391312"/>
+        </scene>
+        <!--SecondViewController-->
+        <scene sceneID="Ah1-F6-hAE">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="Qht-ZA-eyi" userLabel="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="efl-eS-d9X"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ze4-5Z-W9Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JfE-gs-HxA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cosmic_wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="Shf-Ee-11N">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Shf-Ee-11N" firstAttribute="leading" secondItem="JfE-gs-HxA" secondAttribute="leading" id="QZL-bv-u43"/>
+                            <constraint firstAttribute="trailing" secondItem="Shf-Ee-11N" secondAttribute="trailing" id="UEp-FA-hnd"/>
+                            <constraint firstItem="Ze4-5Z-W9Y" firstAttribute="top" secondItem="Shf-Ee-11N" secondAttribute="bottom" id="WyO-ed-62A"/>
+                            <constraint firstItem="Shf-Ee-11N" firstAttribute="top" secondItem="JfE-gs-HxA" secondAttribute="top" id="bSU-je-qgy"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KMT-j1-pad" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1891.304347826087" y="527.44565217391312"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cosmic_wallpaper" width="372" height="696"/>
+        <image name="icon_menu" width="26" height="20"/>
+        <image name="mars_wallpapers" width="375" height="667"/>
+    </resources>
+</document>
